@@ -25,7 +25,7 @@ This guide is based on version **1.0.1** of  Azure DevOps Connector for **Servic
 
 **Prerequisite:** 
 
-- [Service Desk Plus MSP](https://www.manageengine.com/products/service-desk/)  **build 10530**  already installed and configured. [Follow configuration Prerequisties.](#Service Desk Plus MSP configuration)
+- [Service Desk Plus MSP](https://www.manageengine.com/products/service-desk/)  **build 10530**  already installed and configured. [Follow configuration Prerequisties.](#Service-Desk-Plus-MSP-configuration)
 - [Existing Project in Azure DevOps configured](#Azure DevOps project  configuration) for **Scrum process**.
 
 ## Deploy from Azure Marketplace
