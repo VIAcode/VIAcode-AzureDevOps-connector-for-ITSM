@@ -68,7 +68,7 @@ Upon successful delegation ticket status will be changed to [Delegated] in Servi
 
 If all parts were successfully configured, each time upon delegation a new note will be added to the SDP request, which will contain delegation details and link to PBI created in Azure DevOps board. 
 
-![Delegationresult](./media/azdevOpsConnector/ExtRequestSuccessfullyCreated.png)
+![ExtRequestSuccessfullyCreated](./media/azdevOpsConnector/ExtRequestSuccessfullyCreated.png)
 
 ### Supported sync Scenarios
 
