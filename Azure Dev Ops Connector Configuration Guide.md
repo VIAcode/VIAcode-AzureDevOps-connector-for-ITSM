@@ -188,6 +188,7 @@ In Helpdesk Customizer - Custom Triggers create custom trigger.
 ![AddCommentCustomTrigger](./media/azDevOpsConnector/AddCommentCustomTrigger.png)
 
 Action name: Add comment
+
 Checked checkbox "This custom trigger is applicable for all accounts"
 Execute the Action: When a new reply received - Any Time
 
