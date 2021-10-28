@@ -172,7 +172,7 @@ Go to Helpdesk Customizer - Incident Additional fields.
 
 Add following fields: 
 
-- Azure DevOps Connector Data , type: Numeric
+- Azure DevOps Connector Data, type: Numeric
 - Delegated request link, type: Single Line
 
 ![incidentAdditionalFields](./media/azDevOpsConnector/incidentAdditionalFields.png)
