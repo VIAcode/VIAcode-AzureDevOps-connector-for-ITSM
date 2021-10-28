@@ -230,5 +230,5 @@ In case SDP installed on Windows server system drive default path will look as f
 In the the path  with SDP installed do following actions: 
 
 1. Place file Create_Azure_DevOps_Work_Item.html 
-2. Create  folder with name "scripts"  in "resources" and place following file "Create_Azure_DevOps_Work_Item.js"
+2. Create folder with name "scripts" in "resources" and put file "Create_Azure_DevOps_Work_Item.js" there
 3. Create  folder with name "css" in "resources" and place following file "Create_Azure_DevOps_Work_Item.css"
