@@ -190,6 +190,7 @@ In Helpdesk Customizer - Custom Triggers create custom trigger.
 Action name: Add comment
 Checked checkbox "This custom trigger is applicable for all accounts"
 Execute the Action: When a new reply received - Any Time
+
 Match the below criteria: Delegated request link - is not - null
 Perform Action: Webhook Action - Add - Template name "Add comment"
 
