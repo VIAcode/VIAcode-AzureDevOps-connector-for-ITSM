@@ -8,7 +8,7 @@ This guide is based on version **1.0.1** of  Azure DevOps Connector for **Servic
     - [Settings](#settings)
   - [Delegation](#delegation)
     - [Supported sync Scenarios](#supported-sync-scenarios)
-      - [Azure DevOps  to SDP sync](#azure-devops--to-sdp-sync)
+      - [Azure DevOps to SDP sync](#azure-devops-to-sdp-sync)
       - [SDP to Azure DevOps sync](#sdp-to-azure-devops-sync)
   - [Remove Azure DevOps connector](#remove-azure-devops-connector)
   - [Upgrade Azure DevOps connector](#upgrade-azure-devops-connector)
