@@ -17,8 +17,8 @@ This guide is based on version **1.0.1** of Azure DevOps Connector for **Service
   - [Service Desk Plus MSP configuration](#service-desk-plus-msp-configuration)
     - [Add "Delegated" status](#add-delegated-status)
     - [Additional fields for the Account](#additional-fields-for-the-account)
-    - [Add  Incident Additional fields in Helpdesk Customizer](#add--incident-additional-fields-in-helpdesk-customizer)
-    - [Add Additional fields to  Template](#add-additional-fields-to--template)
+    - [Add  Incident Additional fields in Helpdesk Customizer](#add-incident-additional-fields-in-helpdesk-customizer)
+    - [Add Additional fields to  Template](#add-additional-fields-to-template)
     - [Create Custom Triggers](#create-custom-triggers)
     - [Add Azure DevOps connector files to execute in SDP](#add-azure-devops-connector-files-to-execute-in-sdp)
 ## Before you begin
