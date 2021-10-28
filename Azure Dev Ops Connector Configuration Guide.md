@@ -84,7 +84,7 @@ Discussions commented  in Azure DevOps will be synced to ServicDesk Plus MSP as 
 #### SDP to Azure DevOps sync
 
 **Requesters replies sync**
-In case requester who owns the request or requester with whom request has been shared click [Reply] in Service Desk Plus MSP form  and leave a comment, this comment will be synced to Azure DevOps board. ( All replies that have red envelop icon in the request will be synced.)
+In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have red envelope icon in the request will be synced)
 
 **Important!** 
 Notes from Requester in SDP are not synced to Azure DevOps board. 
