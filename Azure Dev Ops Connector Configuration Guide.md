@@ -221,6 +221,7 @@ where
 *  UDF_LONG<integer> - ID of Azure DevOps Connector Data Incident additional field
 *  UDF_LONG<integer> - ID of Azure DevOps Connector Data Incident additional field
 *  UDF_LONG<integer> - ID of Azure DevOps Connector Data Incident additional field
+*  UDF_LONG<integer> - ID of Azure DevOps Connector Data Incident additional field
 * example.com - domain name of website that hosts Azure DevOps connector service
 * ATTRIBUTE_<integer> - variables that represent additional fields for the Account: AzureDevOpsOrganization, AzureDevOpsProject, AzureDevOpsArea, AzureDevOpsToken
 
