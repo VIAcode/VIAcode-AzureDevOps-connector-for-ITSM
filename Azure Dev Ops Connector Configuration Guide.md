@@ -98,7 +98,7 @@ Replies or Notes from Technician in SDP are not synced to Azure DevOps board.
 
 **Step 2:** Select this Application and click "Delete" button, confirm the deletion by typing "Yes" on the sidebar, then click "Delete". Deletion of the Managed Application will consequently delete the managed resource group with "mrg-" prefix and all of its content.
 
-**Step 3:** (optional) If the First Resource Group is empty - only Managed Application was  stored there - you can delete this Resource Group as well.
+**Step 3:** (optional) If the Managed Application Resource Group is empty - only Managed Application was stored there - you can delete this Resource Group as well.
 
 ## Upgrade Azure DevOps connector
 
