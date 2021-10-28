@@ -13,7 +13,7 @@ This guide is based on version **1.0.1** of  Azure DevOps Connector for **Servic
   - [Remove Azure DevOps connector](#remove-azure-devops-connector)
   - [Upgrade Azure DevOps connector](#upgrade-azure-devops-connector)
   - [Troubleshooting](#troubleshooting)
-  - [Azure DevOps project  configuration](#azure-devops-project--configuration)
+  - [Azure DevOps project configuration](#azure-devops-project-configuration)
   - [Service Desk Plus MSP configuration](#service-desk-plus-msp-configuration)
     - [Add "Delegated" status](#add-delegated-status)
     - [Additional fields for the Account](#additional-fields-for-the-account)
