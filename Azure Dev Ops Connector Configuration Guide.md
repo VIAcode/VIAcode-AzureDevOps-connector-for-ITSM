@@ -160,7 +160,7 @@ In Account Details - Account - Additional fields create following fields of type
 - AzureDevOpsOrganization
 - AzureDevOpsProject
 - AzureDevOpsArea
-- AzureDevOps Token
+- AzureDevOpsToken
 
 ![AccountAdditionalFields](./media/azDevOpsConnector/AccountAdditionalFields.png)
 
