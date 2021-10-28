@@ -196,7 +196,7 @@ Perform Action: Webhook Action - Add - Template name "Add comment"
 
 ![AddCommentActionConfiguration](./media/azDevOpsConnector/AddCommentActionConfiguration.png)
 
-Example of  Webhook configuation: 
+Example of Webhook configuation: 
 
 ![WebHookInSDP](./media/azDevOpsConnector/WebHookInSDP.png)
 
