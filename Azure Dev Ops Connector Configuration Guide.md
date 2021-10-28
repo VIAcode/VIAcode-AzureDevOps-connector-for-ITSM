@@ -136,7 +136,7 @@ In opened dialog window please complete the following settings:
 - Token Organization
 - Define token expiration date
 - Grant token "Read, write, & manage" permissions with work items
-Press "Create" button
+- Press "Create" button
 
 ![TokenSettings](./media/azDevOpsConnector/tokenSettings.png)
 
