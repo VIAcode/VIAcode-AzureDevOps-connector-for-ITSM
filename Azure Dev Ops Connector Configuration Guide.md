@@ -60,7 +60,7 @@ Note. All letters are case-sensitive, please use upper and lower letters to matc
 
 ## Delegation
 
-To delegate a ticket,  open it in Service Desk Plus MSP and select the "Delegate" in Custom menu. 
+To delegate a ticket open it in Service Desk Plus MSP and select the "Delegate" in Custom menu. 
 
 ![delegateItem](./media/azDevOpsConnector/Delegate.png)
 
