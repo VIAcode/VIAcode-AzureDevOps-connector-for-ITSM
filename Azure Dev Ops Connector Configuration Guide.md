@@ -43,7 +43,7 @@ After you have selected appropriate software plan you need to configure the depl
 - Choose a subscription to deploy the management application.
 - Create a new Resource Group.
 - Select a region.
-- Provide a name for your application's managed resource group. Note: you can specify name of management resource group according your naming convention.
+- Provide a name for your application's managed resource group. Note: you can specify name of managed resource group according your naming convention.
 - Press "Next : Settings >" button.
 
 ### Settings
