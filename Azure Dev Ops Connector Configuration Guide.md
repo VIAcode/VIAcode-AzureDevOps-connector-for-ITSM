@@ -77,7 +77,7 @@ If all parts were successfully configured, each time upon delegation a new note 
 **Workitem updates sync**
 In case PBI status changed or PBI updated new note will be added in SDP for the delegated ticket. 
 **Workitem Status  sync**
-Changing status to [Done] in Azure DevOps will lead the [Delegated] state change to [Resolved] in Service Desk Plus MSP. 
+Changing status to [Done] in Azure DevOps will make the state change [Delegated] to [Resolved] in Service Desk Plus MSP. 
 **Workitem Discussion  sync**
 Discussions commented  in Azure DevOps will be synced to ServicDesk Plus MSP as notes. 
 
