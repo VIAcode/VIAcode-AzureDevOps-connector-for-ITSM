@@ -183,7 +183,7 @@ You can add  *Azure DevOps Connector Data, Delegated request link* to Incident T
 
 ### Create Custom Triggers
 
-In Helpdesk Customizer- Custom Triggers create custom trigger. 
+In Helpdesk Customizer - Custom Triggers create custom trigger. 
 
 ![AddCommentCustomTrigger](./media/azDevOpsConnector/AddCommentCustomTrigger.png)
 
