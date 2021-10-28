@@ -112,7 +112,7 @@ New version of container image with increased version will automatically replace
 
 * Service Hooks
 
-  To sync Azure DevOps work items with requests in Service Desk Plus MSP 2 web hooks created automatically on first delegation. Both web hooks must have "Enabled" state.   To check status of web hooks please go to the Azure DevOps Projects Settings - General - Service hooks. 
+  To sync Azure DevOps work items with requests in Service Desk Plus MSP 2 web hooks are created automatically on first delegation. Both web hooks must have "Enabled" state. To check status of web hooks please go to the Azure DevOps Projects Settings - General - Service hooks. 
 
   In case sync of work items stopped working, please check the web hooks state and re-enable them. 
 
