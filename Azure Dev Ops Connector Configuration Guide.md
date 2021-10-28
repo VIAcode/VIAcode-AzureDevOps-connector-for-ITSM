@@ -72,7 +72,7 @@ If all parts were successfully configured, each time upon delegation a new note 
 
 ### Supported sync Scenarios
 
-#### Azure DevOps  to SDP sync
+#### Azure DevOps to SDP sync
 
 **Workitem updates sync**
 In case PBI status changed or PBI updated new note will be added in SDP for the delegated ticket. 
