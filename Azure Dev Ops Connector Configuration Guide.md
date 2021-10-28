@@ -122,7 +122,7 @@ Before generating access token, [create Azure DevOps project.](https://docs.micr
 
 **Obtaining the Azure DevOps token **
 
-Please choose "Personal access tokens" option on Azure DevOps personal setting to obtain Azure DevOps token.
+Please choose "Personal access tokens" option on Azure DevOps personal settings to obtain Azure DevOps token.
 
 ![DevOpsKey](./media/azDevOpsConnector/devOpsKey.png)
 
