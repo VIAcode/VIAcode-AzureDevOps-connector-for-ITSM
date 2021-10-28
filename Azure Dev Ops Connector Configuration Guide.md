@@ -146,7 +146,7 @@ Make sure you've copied the token. **It is not stored and you will not be able t
 
 ## Service Desk Plus MSP configuration
 
-Login to Service Desk Plus MSP  with administrator credentials. 
+Login to Service Desk Plus MSP with administrator credentials. 
 Configure necessary fields from the "Admin" menu. 
 
 ### Add "Delegated" status
