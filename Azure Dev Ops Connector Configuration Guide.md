@@ -116,7 +116,7 @@ New version of container image with increased version will automatically replace
 
   In case sync of work items stopped working, please check the web hooks state and re-enable them. 
 
-## Azure DevOps project  configuration
+## Azure DevOps project configuration
 
 Before generating access token, [create Azure DevOps project.](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=azure-devops&tabs=preview-page)
 
