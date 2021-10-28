@@ -224,7 +224,7 @@ where
 ### Add Azure DevOps connector files to execute in SDP
 
 Add link to Create_Azure_DevOps_Work_Item.html in Request custom menu template and add special Azure DevOps Connector files to SDP host. 
-In case SDP installed on Windows server system drive default path will look as follow: c:\ManagedEngine\ServiceDeskPlus-MSP\integration\resources 
+In case SDP installed on Windows server system drive default path will look as follows: C:\Program Files\ManageEngine\ServiceDeskPlus-MSP\integration\resources 
 
 In the the path  with SDP installed do following actions: 
 
