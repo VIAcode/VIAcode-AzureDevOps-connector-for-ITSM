@@ -177,7 +177,7 @@ Add following fields:
 
 ![incidentAdditionalFields](./media/azDevOpsConnector/incidentAdditionalFields.png)
 
-### Add Additional fields to  Template
+### Add Additional fields to Template
 
 You can add *Azure DevOps Connector Data, Delegated request link* to Incident Template or any other template that will be used to delegate requests using Azure DevOps connector.
 
