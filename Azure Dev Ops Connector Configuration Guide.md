@@ -52,7 +52,7 @@ To enable Azure DevOps Connector for Service Desk Plus you have to specify:
 - API key of the account that has administrator or SDAdmin role in the Service Desk Plus.  
   Note. All delegation related actions will be processed on behalf of this user.
 - Account name that represents organization in Service Desk Plus MSP. 
-Note. All letters are  case-sensitive, please use upper and lower letters  to match name of the Account in Service Desk Plus MSP. 
+Note. All letters are case-sensitive, please use upper and lower letters to match name of the Account in Service Desk Plus MSP.
 
 ![Settings](./media/azDevOpsConnector/settings.png)
 
