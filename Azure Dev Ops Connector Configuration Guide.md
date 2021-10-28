@@ -108,7 +108,7 @@ New version of container image with increased version will automatically replace
 
 * Logs
 
-  In case of any issue encountered with Azure DevOps connector, please check Azure DevOps connector logs. Logs located in the cloud management group: mrg-<id>  under section AppService - DeploymentCenter- Logs  tab. 
+  In case of any issue encountered with Azure DevOps connector, please check Azure DevOps connector logs. Logs located in the managed resource group: mrg-<id> in  App Service - Deployment Center - Logs tab. 
 
 * Service Hooks
 
