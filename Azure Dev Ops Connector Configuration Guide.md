@@ -191,7 +191,6 @@ Action name: Add comment
 Checked checkbox "This custom trigger is applicable for all accounts"
 Execute the Action: When a new reply received - Any Time
 Match the below criteria: Delegated request link - is not - null
-Perform Action: Checked checkbox "Stop processing subsequent Actions"
 Perform Action: Webhook Action - Add - Template name "Add comment"
 
 ![AddCommentActionConfiguration](./media/azDevOpsConnector/AddCommentActionConfiguration.png)
