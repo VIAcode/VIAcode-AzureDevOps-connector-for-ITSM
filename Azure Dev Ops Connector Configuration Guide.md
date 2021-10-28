@@ -151,7 +151,7 @@ Configure necessary fields from the "Admin" menu.
 
 ### Add "Delegated" status
 
-In Helpdesk Customizer- Status  create new status "Delegated". It will be used by Azure DevOps connector. 
+In Helpdesk Customizer - Status create new status "Delegated". It will be used by Azure DevOps connector. 
 
 ### Create Additional fields for the Account
 
