@@ -43,16 +43,13 @@ After you have selected appropriate software plan you need to configure the depl
 - Choose a subscription to deploy the managed application.
 - Create a new Resource Group.
 - Select a region.
-- Provide a name for your application's managed resource group. Note: you can specify name of managed resource group according your naming convention.
+- Provide a name for your application's managed resource group. Note: you can specify name of managed resource group according to your naming convention.
 - Press "Next : Settings >" button.
 
 ### Settings
 
-To enable Azure DevOps Connector for Service Desk Plus you have to specify: 
-- API key of the account that has administrator or SDAdmin role in the Service Desk Plus.  
+To enable Azure DevOps Connector for Service Desk Plus you have to specify API key of the account that has administrator or SDAdmin role in the Service Desk Plus.  
   Note. All delegation related actions will be processed on behalf of this user.
-- Account name that represents organization in Service Desk Plus MSP. 
-Note. All letters are case-sensitive, please use upper and lower letters to match name of the Account in Service Desk Plus MSP.
 
 ![Settings](./media/azDevOpsConnector/settings.png)
 
@@ -75,18 +72,25 @@ If all parts were successfully configured, each time upon delegation a new note 
 #### Azure DevOps to SDP sync
 
 **Workitem updates sync**
+
 In case PBI status changed or PBI updated new note will be added in SDP for the delegated ticket. 
+
 **Workitem Status  sync**
-Changing status to [Done] in Azure DevOps will make the state change [Delegated] to [Resolved] in Service Desk Plus MSP. 
+
+Changing status to [Done] in Azure DevOps will make the state change from [Delegated] to [Resolved] in Service Desk Plus MSP. 
+
 **Workitem Discussion  sync**
+
 Discussions commented  in Azure DevOps will be synced to ServicDesk Plus MSP as notes. 
 
 #### SDP to Azure DevOps sync
 
 **Requesters replies sync**
+
 In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have red envelope icon in the request will be synced)
 
 **Important!** 
+
 Notes from Requester in SDP are not synced to Azure DevOps board. 
 Replies or Notes from Technician in SDP are not synced to Azure DevOps board. 
 
@@ -108,7 +112,7 @@ New version of container image with increased version will automatically replace
 
 * Logs
 
-  In case of any issue encountered with Azure DevOps connector, please check Azure DevOps connector logs. Logs located in the managed resource group: mrg-<id> in  App Service - Deployment Center - Logs tab. 
+  In case of any issue encountered with Azure DevOps connector, please check Azure DevOps connector logs. Logs are located in the managed resource group: mrg-<id> in  App Service - Deployment Center - Logs tab. 
 
 * Service Hooks
 
@@ -120,7 +124,7 @@ New version of container image with increased version will automatically replace
 
 Before generating access token, [create Azure DevOps project.](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=azure-devops&tabs=preview-page)
 
-**Obtaining the Azure DevOps token **
+**Obtaining the Azure DevOps token**
 
 Please choose "Personal access tokens" option on Azure DevOps personal settings to obtain Azure DevOps token.
 
@@ -190,9 +194,11 @@ In Helpdesk Customizer - Custom Triggers create custom trigger.
 Action name: Add comment
 
 Checked checkbox "This custom trigger is applicable for all accounts"
+
 Execute the Action: When a new reply received - Any Time
 
 Match the below criteria: Delegated request link - is not - null
+
 Perform Action: Webhook Action - Add - Template name "Add comment"
 
 ![AddCommentActionConfiguration](./media/azDevOpsConnector/AddCommentActionConfiguration.png)
@@ -218,16 +224,16 @@ workItemId=$UDF_LONG2&requestId=$RequestId&organization=$ATTRIBUTE_301&project=$
 
 where
 * example.com - domain name of website that hosts Azure DevOps connector service
-* ATTRIBUTE_<integer> - variables that represent additional fields for the Account: AzureDevOpsOrganization, AzureDevOpsProject, AzureDevOpsArea, AzureDevOpsToken
-*  UDF_LONG<integer> - ID of Azure DevOps Connector Data Incident additional field
+* ATTRIBUTE_\<integer\> - variables that represent additional fields for the Account: AzureDevOpsOrganization, AzureDevOpsProject, AzureDevOpsArea, AzureDevOpsToken
+*  UDF_LONG\<integer\> - ID of Azure DevOps Connector Data Incident additional field
 
 ### Add Azure DevOps connector files to execute in SDP
 
 Add link to Create_Azure_DevOps_Work_Item.html in Request custom menu template and add special Azure DevOps Connector files to SDP host. 
 In case SDP installed on Windows server system drive default path will look as follows: C:\Program Files\ManageEngine\ServiceDeskPlus-MSP\integration\resources 
 
-In the the path  with SDP installed do following actions: 
+In SDP installation folder do following actions: 
 
-1. Place file Create_Azure_DevOps_Work_Item.html 
+1. Put file Create_Azure_DevOps_Work_Item.html 
 2. Create folder with name "scripts" in "resources" and put file "Create_Azure_DevOps_Work_Item.js" there
 3. Create folder with name "css" in "resources" and put file "Create_Azure_DevOps_Work_Item.css" there
