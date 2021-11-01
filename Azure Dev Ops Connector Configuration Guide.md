@@ -1,5 +1,5 @@
 # Azure DevOps connector for Service Desk Plus MSP deployment and configuration guide
-This guide is based on version **1.0.1** of Azure DevOps Connector for **ServiceDesk Plus MSP**.
+This guide is based on version **MVP2** of Azure DevOps Connector for **ServiceDesk Plus MSP**.
 - [Azure DevOps connector for Service Desk Plus MSP deployment and configuration guide](#azure-devops-connector-for-service-desk-plus-msp-deployment-and-configuration-guide)
   - [Before you begin](#before-you-begin)
   - [Deploy from Azure Marketplace](#deploy-from-azure-marketplace)
