@@ -15,10 +15,10 @@ This guide is based on version **MVP2** of Azure DevOps Connector for **ServiceD
   - [Troubleshooting](#troubleshooting)
   - [Azure DevOps project configuration](#azure-devops-project-configuration)
   - [Service Desk Plus MSP configuration](#service-desk-plus-msp-configuration)
-    - [Add "Delegated" status](#add-delegated-status)
-    - [Additional fields for the Account](#additional-fields-for-the-account)
+    - [Add new statuses](#add-new-statuses)
+    - [Create Additional fields for the Account](#create-additional-fields-for-the-account)
     - [Add  Incident Additional fields in Helpdesk Customizer](#add--incident-additional-fields-in-helpdesk-customizer)
-    - [Add Additional fields to  Template](#add-additional-fields-to--template)
+    - [Add Additional fields to Template](#add-additional-fields-to-template)
     - [Create Custom Triggers](#create-custom-triggers)
     - [Add Azure DevOps connector files to execute in SDP](#add-azure-devops-connector-files-to-execute-in-sdp)
 ## Before you begin
@@ -77,7 +77,7 @@ In case PBI status changed or PBI updated new note will be added in SDP for the 
 
 **Workitem Status  sync**
 
-Changing status to [Done] in Azure DevOps will make the state change from [Delegated] to [Resolved] in Service Desk Plus MSP. 
+Changing status to [Done] in Azure DevOps will make the state change from [Delegated] to [Pending Resolved] in Service Desk Plus MSP.
 
 **Workitem Discussion  sync**
 
@@ -87,12 +87,13 @@ Discussions commented  in Azure DevOps will be synced to ServicDesk Plus MSP as 
 
 **Requesters replies sync**
 
-In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have red envelope icon in the request will be synced)
+In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have red envelope icon in Service Desk Plus MSP will be synced).
 
 **Important!** 
 
-Notes from Requester in SDP are not synced to Azure DevOps board. 
-Replies or Notes from Technician in SDP are not synced to Azure DevOps board. 
+- Notes from Requester in SDP are not synced to Azure DevOps board. 
+-  Replies from Technician in SDP are not synced to Azure DevOps board. 
+-  Notes from Technician in SDP are not synced to Azure DevOps board. 
 
 
 
@@ -153,9 +154,13 @@ Make sure you've copied the token. **It is not stored and you will not be able t
 Login to Service Desk Plus MSP with administrator credentials. 
 Configure necessary fields from the "Admin" menu. 
 
-### Add "Delegated" status
+### Add new statuses
 
-In Helpdesk Customizer - Status create new status "Delegated". It will be used by Azure DevOps connector. 
+In Helpdesk Customizer - Status create new statuses: 
+- "Delegated"
+- "Pending Resolved"
+
+Statuses will be used by Azure DevOps connector. 
 
 ### Create Additional fields for the Account
 
