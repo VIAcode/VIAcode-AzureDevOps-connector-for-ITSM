@@ -175,6 +175,10 @@ In Account Details - Account - Additional fields create following fields of type
 
 You need to fill these values with your Azure DevOps data for each account to make Azure DevOps connector sync data. 
 
+Below you can see an example of filled values for the selected Account in Service Desk Plus:
+
+![Organization](./media/azDevOpsConnector/Organization.png)
+
 ### Add  Incident Additional fields in Helpdesk Customizer
 
 Go to Helpdesk Customizer - Incident Additional fields.
