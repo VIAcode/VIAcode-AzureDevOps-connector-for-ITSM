@@ -65,9 +65,13 @@ Upon successful delegation ticket status will be changed to [Delegated] in Servi
 
 If all parts were successfully configured, each time upon delegation a new note will be added to the SDP request, which will contain delegation details and link to PBI created in Azure DevOps board. 
 
+**Note.** Notes, Requesters replies, Technician replies existed <u>before delegation</u> will be synced to Azure DevOps workitem.
+
 ![ExtRequestSuccessfullyCreated](./media/azDevOpsConnector/ExtRequestSuccessfullyCreated.png)
 
 ### Supported sync Scenarios
+
+Supported workitem type by Azure DevOps connector **Product Backlog Item**.
 
 #### Azure DevOps to SDP sync
 
@@ -81,21 +85,27 @@ Changing status to [Done] in Azure DevOps will make the state change from [Deleg
 
 **Workitem Discussion  sync**
 
-Discussions commented  in Azure DevOps will be synced to ServicDesk Plus MSP as notes. 
+Discussions commented  in Azure DevOps will be synced to Service Desk Plus MSP as notes. 
 
 #### SDP to Azure DevOps sync
 
 **Requesters replies sync**
 
-In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have red envelope icon in Service Desk Plus MSP will be synced).
+In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have <span  style="color:red">red</span> envelope icon in Service Desk Plus MSP will be synced).
 
 **Important!** 
+The following sync scenarios are not supported: 
 
 - Notes from Requester in SDP are not synced to Azure DevOps board. 
 -  Replies from Technician in SDP are not synced to Azure DevOps board. 
 -  Notes from Technician in SDP are not synced to Azure DevOps board. 
 
+### Merge
 
+Information about merged requests that were merged before delegation will be synced to Azure DevOps without lose (notes, replies from technician, replies from requester, request body, etc...). 
+
+**Important!** 
+Please keep in mind that merged requests to request in  already **Delegated**  status will not be synced with Azure DevOps (notes, replies from technician, replies from requester, request body, etc...).
 
 ## Remove Azure DevOps connector
 
@@ -159,8 +169,22 @@ Configure necessary fields from the "Admin" menu.
 In Helpdesk Customizer - Status create new statuses: 
 - "Delegated"
 - "Pending Resolved"
+- "Very low"
 
-Statuses will be used by Azure DevOps connector. 
+Statuses are used by Azure DevOps connector to map Azure DevOps priorities  with statuses in Service Desk Plus. 
+
+? Following default mapping configured
+
+| Status in Service Desk Plus | Priority in Azure DevOps |
+| --------------------------- | ------------------------ |
+|                             |                          |
+|                             |                          |
+
+
+
+
+
+
 
 ### Create Additional fields for the Account
 
