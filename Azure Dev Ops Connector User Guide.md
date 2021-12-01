@@ -1,6 +1,6 @@
-# Azure DevOps connector for Service Desk Plus MSP deployment and configuration guide
+# Azure DevOps connector for ServiceDesk Plus MSP user guide
 This guide is based on version **MVP2** of Azure DevOps Connector for **ServiceDesk Plus MSP**.
-- [Azure DevOps connector for Service Desk Plus MSP deployment and configuration guide](#azure-devops-connector-for-service-desk-plus-msp-deployment-and-configuration-guide)
+- [Azure DevOps connector for ServiceDesk Plus MSP deployment and configuration guide](#azure-devops-connector-for-servicedesk-plus-msp-deployment-and-configuration-guide)
   - [Before you begin](#before-you-begin)
   - [Deploy from Azure Marketplace](#deploy-from-azure-marketplace)
   - [Configuration of Azure DevOps connector](#configuration-of-azure-devops-connector)
@@ -10,12 +10,14 @@ This guide is based on version **MVP2** of Azure DevOps Connector for **ServiceD
     - [Supported sync Scenarios](#supported-sync-scenarios)
       - [Azure DevOps to SDP sync](#azure-devops-to-sdp-sync)
       - [SDP to Azure DevOps sync](#sdp-to-azure-devops-sync)
+      - [Merge](#merge)
   - [Remove Azure DevOps connector](#remove-azure-devops-connector)
   - [Upgrade Azure DevOps connector](#upgrade-azure-devops-connector)
   - [Troubleshooting](#troubleshooting)
   - [Azure DevOps project configuration](#azure-devops-project-configuration)
-  - [Service Desk Plus MSP configuration](#service-desk-plus-msp-configuration)
-    - [Add new statuses](#add-new-statuses)
+  - [ServiceDesk Plus MSP configuration](#servicedesk-plus-msp-configuration)
+    - [Add custom Statuses](#add-custom-statuses)
+    - [Add custom Priorities](#add-custom-priorities)
     - [Create Additional fields for the Account](#create-additional-fields-for-the-account)
     - [Add  Incident Additional fields in Helpdesk Customizer](#add--incident-additional-fields-in-helpdesk-customizer)
     - [Add Additional fields to Template](#add-additional-fields-to-template)
@@ -25,8 +27,9 @@ This guide is based on version **MVP2** of Azure DevOps Connector for **ServiceD
 
 **Prerequisite:** 
 
-- [Service Desk Plus MSP](https://www.manageengine.com/products/service-desk-msp/)  **build 10528 or higher**  already installed and configured. [Follow configuration Prerequisties.](#Service-Desk-Plus-MSP-configuration)
+- [Service Desk Plus MSP](https://www.manageengine.com/products/service-desk-msp/)  **build 10530**  already installed and configured. [Follow configuration Prerequisties.](#Service-Desk-Plus-MSP-configuration)
 - [Existing Project in Azure DevOps configured](#Azure-DevOps-project-configuration) for **Scrum process**.
+
 
 ## Deploy from Azure Marketplace
 
@@ -48,7 +51,7 @@ After you have selected appropriate software plan you need to configure the depl
 
 ### Settings
 
-To enable Azure DevOps Connector for Service Desk Plus you have to specify API key of the account that has administrator or SDAdmin role in the Service Desk Plus.  
+To enable Azure DevOps Connector for ServiceDesk Plus you have to specify API key of the account that has administrator or SDAdmin role in the ServiceDesk Plus.  
   Note. All delegation related actions will be processed on behalf of this user.
 
 ![Settings](./media/azDevOpsConnector/settings.png)
@@ -57,11 +60,11 @@ To enable Azure DevOps Connector for Service Desk Plus you have to specify API k
 
 ## Delegation
 
-To delegate a ticket open it in Service Desk Plus MSP and select the "Delegate" in Custom menu. 
+To delegate a ticket open it in ServiceDesk Plus MSP and select the "Delegate" in Custom menu. 
 
 ![delegateItem](./media/azDevOpsConnector/Delegate.png)
 
-Upon successful delegation ticket status will be changed to [Delegated] in Service Desk Plus MSP.
+Upon successful delegation ticket status will be changed to [Delegated] in ServiceDesk Plus MSP.
 
 If all parts were successfully configured, each time upon delegation a new note will be added to the SDP request, which will contain delegation details and link to PBI created in Azure DevOps board. 
 
@@ -81,17 +84,17 @@ In case PBI status changed or PBI updated new note will be added in SDP for the 
 
 **Workitem Status  sync**
 
-Changing status to [Done] in Azure DevOps will make the state change from [Delegated] to [Pending Resolved] in Service Desk Plus MSP.
+Changing status to [Done] in Azure DevOps will make the state change from [Delegated] to [Pending Resolved] in ServiceDesk Plus MSP.
 
 **Workitem Discussion  sync**
 
-Discussions commented  in Azure DevOps will be synced to Service Desk Plus MSP as notes. 
+Discussions commented  in Azure DevOps will be synced to ServiceDesk Plus MSP as notes. 
 
 #### SDP to Azure DevOps sync
 
 **Requesters replies sync**
 
-In case requester who owns the request or requester with whom request has been shared clicks [Reply] in Service Desk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have <span  style="color:red">red</span> envelope icon in Service Desk Plus MSP will be synced).
+In case requester who owns the request or requester with whom request has been shared clicks [Reply] in ServiceDesk Plus MSP form and leaves a comment, this comment will be synced to Azure DevOps board. (All replies that have <span  style="color:red">red</span> envelope icon in ServiceDesk Plus MSP will be synced).
 
 **Important!** 
 The following sync scenarios are not supported: 
@@ -100,12 +103,13 @@ The following sync scenarios are not supported:
 -  Replies from Technician in SDP are not synced to Azure DevOps board. 
 -  Notes from Technician in SDP are not synced to Azure DevOps board. 
 
-### Merge
+#### Merge
 
-Information about merged requests that were merged before delegation will be synced to Azure DevOps without lose (notes, replies from technician, replies from requester, request body, etc...). 
+**Requests merged before delegation**
+Information about requests that were merged before delegation will be synced to Azure DevOps discussion without loss. 
 
-**Important!** 
-Please keep in mind that merged requests to request in  already **Delegated**  status will not be synced with Azure DevOps (notes, replies from technician, replies from requester, request body, etc...).
+**Requests merged after delegation**
+Merged requests after delegation will not be synced with Azure DevOps because they are not considered as replies.
 
 ## Remove Azure DevOps connector
 
@@ -127,7 +131,7 @@ New version of container image with increased version will automatically replace
 
 * Service Hooks
 
-  To sync Azure DevOps work items with requests in Service Desk Plus MSP 2 web hooks are created automatically on first delegation. Both web hooks must have "Enabled" state. To check status of web hooks please go to the Azure DevOps Projects Settings - General - Service hooks. 
+  To sync Azure DevOps work items with requests in ServiceDesk Plus MSP 2 web hooks are created automatically on first delegation. Both web hooks must have "Enabled" state. To check status of web hooks please go to the Azure DevOps Projects Settings - General - Service hooks. 
 
   In case sync of work items stopped working, please check the web hooks state and re-enable them. 
 
@@ -159,32 +163,50 @@ Make sure you've copied the token. **It is not stored and you will not be able t
 
 ![SuccessToken](./media/azDevOpsConnector/successToken.png)
 
-## Service Desk Plus MSP configuration
+## ServiceDesk Plus MSP configuration
 
-Login to Service Desk Plus MSP with administrator credentials. 
+Login to ServiceDesk Plus MSP with administrator credentials. 
 Configure necessary fields from the "Admin" menu. 
 
-### Add new statuses
+### Add custom Statuses
 
 In Helpdesk Customizer - Status create new statuses: 
 - "Delegated"
 - "Pending Resolved"
-- "Very low"
+Statuses are used by Azure DevOps connector to map Azure DevOps priorities  with statuses in ServiceDesk Plus. 
 
-Statuses are used by Azure DevOps connector to map Azure DevOps priorities  with statuses in Service Desk Plus. 
+### Add custom Priorities
 
-? Following default mapping configured
+In addition to existing default priorities in ServiceDesk Plus MSP Azure DevOps connector works with custom created priorities. 
 
-| Status in Service Desk Plus | Priority in Azure DevOps |
-| --------------------------- | ------------------------ |
-|                             |                          |
-|                             |                          |
+In  ServiceDesk Plus MSP go to Helpdesk Customizer - Status and create new statuses: 
+- "Critical"
 
+- "Very low" 
 
+The below table explains ServiceDesk Plus MSP priority mapping  with Azure DevOps product backlog item Priority.
 
+| Priority in ServiceDesk Plus | Priority in Azure DevOps PBI |
+| ---------------------------- | ---------------------------- |
+| Not Specified                | 2                            |
+| Critical                     | 1                            |
+| High                         | 2                            |
+| Medium                       | 3                            |
+| Normal                       | 3                            |
+| Low                          | 4                            |
+| Very low                     | 4                            |
 
+The below table explains ServiceDesk Plus MSP priority mapping  with Azure DevOps product backlog item Severity.
 
-
+| Priority in ServiceDesk Plus | Severity  in Azure DevOps PBI |
+| ----------------------------- | ---------------------------- |
+| Not Specified                 | 3-Medium |
+| Critical                      | 1                           |
+| High                          | 2-High             |
+| Medium                        | 3-Medium                     |
+| Normal | 3-Medium |
+| Low                           | 4-Low                        |
+| Very low                      | 4-Low                        |
 
 ### Create Additional fields for the Account
 
@@ -199,7 +221,7 @@ In Account Details - Account - Additional fields create following fields of type
 
 You need to fill these values with your Azure DevOps data for each account to make Azure DevOps connector sync data. 
 
-Below you can see an example of filled values for the selected Account in Service Desk Plus:
+Below you can see an example of filled values for the selected Account in ServiceDesk Plus:
 
 ![Organization](./media/azDevOpsConnector/Organization.png)
 
