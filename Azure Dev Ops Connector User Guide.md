@@ -27,7 +27,7 @@ This guide is based on version **MVP2** of Azure DevOps Connector for **ServiceD
 
 **Prerequisite:** 
 
-- [Service Desk Plus MSP](https://www.manageengine.com/products/service-desk-msp/)  **build 10530**  already installed and configured. [Follow configuration Prerequisties.](#Service-Desk-Plus-MSP-configuration)
+- [ServiceDesk Plus MSP](https://www.manageengine.com/products/service-desk-msp/)  **build 10530**  already installed and configured. [Follow configuration Prerequisties.](#Service-Desk-Plus-MSP-configuration)
 - [Existing Project in Azure DevOps configured](#Azure-DevOps-project-configuration) for **Scrum process**.
 
 
@@ -106,9 +106,11 @@ The following sync scenarios are not supported:
 #### Merge
 
 **Requests merged before delegation**
+
 Information about requests that were merged before delegation will be synced to Azure DevOps discussion without loss. 
 
 **Requests merged after delegation**
+
 Merged requests after delegation will not be synced with Azure DevOps because they are not considered as replies.
 
 ## Remove Azure DevOps connector
@@ -173,6 +175,7 @@ Configure necessary fields from the "Admin" menu.
 In Helpdesk Customizer - Status create new statuses: 
 - "Delegated"
 - "Pending Resolved"
+  
 Statuses are used by Azure DevOps connector to map Azure DevOps priorities  with statuses in ServiceDesk Plus. 
 
 ### Add custom Priorities
@@ -181,9 +184,8 @@ In addition to existing default priorities in ServiceDesk Plus MSP Azure DevOps 
 
 In  ServiceDesk Plus MSP go to Helpdesk Customizer - Status and create new statuses: 
 - "Critical"
-
 - "Very low" 
-
+  
 The below table explains ServiceDesk Plus MSP priority mapping  with Azure DevOps product backlog item Priority.
 
 | Priority in ServiceDesk Plus | Priority in Azure DevOps PBI |
